@@ -1,0 +1,31 @@
+// Globals
+$body-font-family: 'Open Sans','Helvetica Neue',sans-serif;
+// $font-size-root: 14px !default;
+$line-height-root: 1.5 !default;
+$border-radius-root: 5px !default;
+
+$toolbar-content-padding-y: 0 !default;
+$toolbar-content-padding-x: 24px !default;
+
+$container-padding-x: 24px !default;
+
+$card-title-font-size: 14px;
+$card-title-line-height: inherit;
+
+// Pagination
+$pagination-item-min-width: 24px;
+
+$list-item-title-font-size: 14px;
+$list-item-subtitle-font-size: 12px;
+
+$data-table-regular-row-font-size: 13px;
+
+// Variables must come before the import
+
+// Any component modifications must be imported at the bottom
+// @import '~vuetify/src/styles/settings/_variables.scss';
+
+// Reset themes
+@import './override-theme.scss';
+// Reset components
+@import './override-vuetify.sass';

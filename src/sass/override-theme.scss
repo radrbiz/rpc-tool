@@ -1,0 +1,27 @@
+$material-light: (
+  'background': #eef2f7,
+  'text': (
+    'primary': #333
+  ),
+  'cards': #fff,
+  'app-bar': #fff,
+  'text-fields': (
+    'filled': #f7f7f7,
+    'filled-hover': #f1f1f1
+  )
+);
+$material-dark: (
+  'background': #262a2f,
+  'text': (
+    'primary': #ccc
+  ),
+  'cards': #30373c,
+  'app-bar': #1e2126,
+  'text-fields': (
+    'filled': #1e2126,
+    'filled-hover': #181920
+  )
+);
+
+// Any component modifications must be imported at the bottom
+// @import '~vuetify/src/styles/main.sass';

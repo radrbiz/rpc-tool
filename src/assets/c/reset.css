@@ -1,0 +1,30 @@
+*{padding:0;margin:0;outline:0;-webkit-tap-highlight-color:transparent}
+html{overflow-y:scroll;overflow-wrap:break-word;font-size:var(--htmlFont)}
+body{font-size:var(--bodyFont)}
+body,input,textarea,select,button{font-family:'Open Sans','Helvetica Neue','\5fae\8f6f\96c5\9ed1',sans-serif;line-height:1.667}
+input,textarea,table{font-size:1em;font-family:inherit}
+table{border-spacing:0}
+img,fieldset,hr,iframe,button{border:0}
+img,.img{display:inline-block;background:no-repeat;vertical-align:top}
+li{list-style:none}
+button,.btn{overflow:visible;width:auto;padding:0;box-sizing:content-box;text-indent:0;outline:0;cursor:pointer;border:0;background:none;}
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
+sup,sub{vertical-align:baseline}
+blockquote,q{quotes:none}
+blockquote::before,blockquote::after,q:before,q::after{content:'';content:none}
+h1,h2,h3,h4,h5,h6{font-size:1em;font-weight:normal}
+i,cite,em,var,dfn,address{font-style:normal}
+b,strong{font-weight:inherit}
+textarea{resize:vertical}
+input,textarea{user-select:text}
+object,canvas,embed{display:block}
+a{cursor:pointer}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus{box-shadow:0 0 0px calc(100rem/var(--dppx)) #F7F7F7 inset;-webkit-text-fill-color:inherit!important}
+label{display:inline;max-width:none;margin-bottom: auto;font-weight:normal}
+svg:not(:root){overflow:hidden}
+svg{user-select:none}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{margin:0;-webkit-appearance:none}
+input[type='number'] {-moz-appearance:textfield}

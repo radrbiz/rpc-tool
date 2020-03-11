@@ -1,0 +1,44 @@
+version: '3.4'
+services:
+  # Local Development
+  dev:
+    env_file:
+      - .env
+    build:
+      network: host
+      context: .
+      dockerfile: ./Docker/Dockerfile
+      target: dev
+    image: $DOCKER_PROJ_NAME-dev
+    ports:
+      - $WEB_APP_PORT:80
+    volumes:
+       - .:/code
+    container_name: $DOCKER_PROJ_NAME
+    privileged: true
+    stdin_open: true
+    tty: true
+
+  # Service for Production
+  build:
+    network_mode: host
+    env_file:
+      - .env
+    build:
+      network: host
+      context: ./
+      dockerfile: ./Docker/Dockerfile
+      target: build
+    image: $DOCKER_PROJ_NAME-build
+    volumes:
+       - .:/code
+  service:
+    network_mode: host
+    env_file:
+      - .env
+    build:
+      network: host
+      context: ./
+      dockerfile: ./Docker/Dockerfile
+      target: service
+    image: $DOCKER_REPO_PROJ

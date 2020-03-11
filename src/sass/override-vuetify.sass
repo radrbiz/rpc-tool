@@ -1,0 +1,221 @@
+:root
+  --tblExpandBg: #f5f5f5
+  &.theme-dark
+    --tblExpandBg: #424242
+
+/* Override Vuetify */
+.v-application
+  & a
+    color: var(--aColor)!important
+// Badge
+.v-badge
+  display: inline-flex
+// Tabs
+.v-tabs-slider
+  &-wrapper
+    z-index: 2
+    pointer-events: none
+.v-tab
+  text-transform: capitalize
+  letter-spacing: normal
+  &--active::before
+    opacity: 0!important
+  &:not(.v-tab--active)
+    opacity: .9
+
+// Image
+.v-image__placeholder,
+.v-image__image
+  background-color: var(--gridBg)
+
+// Card
+.v-card__text,
+.v-card__subtitle
+  color: var(--txt)!important
+
+// Dialog
+$dialog-border-radius: 8px
+.v-dialog
+  & > .v-card,
+  & > .v-form > .v-card
+    & > .v-card__title.headline
+      word-break: break-word
+      padding-top: 20px
+      padding-left: 26px
+      padding-right: 26px
+      & + .v-card__text
+        min-height:9em
+      & ~ .v-card__actions
+        padding-bottom: 20px
+      & + .v-card__actions:last-child
+        margin-top: 3em
+
+// Icon
+.v-icon
+  font-style: normal
+
+// Form Messages
+.v-messages
+  &__message
+    line-height: 14px
+
+// Button
+.v-btn
+  text-transform: capitalize
+  letter-spacing: normal
+  + .v-btn
+    margin-left: 1em
+    &--text
+      margin-left: .5em
+.v-btn:not(.v-btn--outlined):not(.v-btn--icon):not(.v-btn--flat)
+  &.primary,
+  &.success,
+  &.error,
+  &.warning,
+  &.info,
+  &[style*="background"]
+    color: #fff
+
+.v-input
+  .v-label
+    min-height: 20px
+    height: auto
+
+.v-input--is-readonly
+  pointer-events: none
+  .v-input__append-inner
+    pointer-events: auto
+// Radio
+.v-radio
+  label
+    .v-icon
+      margin-left: .5em
+
+// Switch
+// .v-input--switch
+.v-input--selection-controls
+  padding-top: 0!important
+  margin-top: 0!important
+
+// TextField & Select
+.v-text-field
+  &.slot-hint,
+  & + .slot-hint
+    z-index: 1
+    position: absolute
+    margin-top: -1.875em
+    margin-left: .875em
+  & > .v-input__control
+    & > .v-input__slot
+      margin-bottom: 3px
+      &::before
+        border-bottom-width: 0!important
+      & .v-label
+        z-index: 3
+        overflow: visible
+        font-size: 1.2rem!important
+        pointer-events: none
+  &--filled
+    & > .v-input__control
+      & > .v-input__slot,
+      & .v-select__selections
+        min-height: 100%!important
+        padding-top: 0!important
+        & .v-label
+          top: 18px
+          &.v-label--active
+            top: 10px
+        & .v-chip
+          top:3px
+          position: relative
+          & .v-chip__content
+            height: 23px
+        & input,
+        & .v-text-field__suffix,
+        & .v-select__selections > *
+          margin-top: 16px!important
+          margin-bottom: 0!important
+          display: inline-flex
+        & .v-text-field__suffix
+          margin-top: 10px!important
+          opacity: .75
+  &.v-text-field--enclosed
+    .v-input__prepend-outer,
+    .v-input__append-outer
+      margin-top: 8px
+
+  // Select
+.v-select
+  & .v-select__slot
+    min-width: 6em
+  & .v-select__selections
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+
+// Slider
+.v-input__slider
+  .v-messages
+    margin-left: 8px
+    margin-right: 8px
+  .v-input__slot
+    margin-bottom: 0
+
+// Hide Input Details
+.v-input--hide-details
+  margin-top: 0!important
+  &.v-text-field--full-width
+    &.v-text-field--single-line
+      & .v-input__slot
+        min-height: 100%
+        box-shadow: none!important
+      & input
+        margin-top: 0!important
+  &.v-select
+    & .v-input__slot
+      padding-left: 6px!important
+      padding-right: 0!important
+    & .v-select__slot
+      min-width: 0
+      & .v-select__selections > *
+        margin-top: 0px!important
+      & input
+        width:0
+      & .v-input__append-inner
+        align-self: center
+        margin-top: 0px!important
+
+// Data Table
+$data-table-regular-header-height: 42px
+// $data-table-regular-row-height: 36px
+.v-data-table
+  /* Replace slot: no-data <loading-guard> required!!! */
+  .v-data-table__empty-wrapper
+    display: none
+  &.theme--dark
+    a
+      color: #fff
+  tr,
+  td
+    padding-top: .5em
+    padding-bottom: .5em
+  tbody
+    tr
+      &.expanded,
+      &.v-data-table__expanded
+        background-color: var(--tblExpandBg)!important
+        border-bottom: 1px dashed var(--gridLineH4)!important
+        & > td
+          border-bottom: none!important
+        & + *
+          border-bottom: 1px solid var(--gridLineH4)!important
+          background-color: var(--tblExpandBg)!important
+
+// List
+.v-list--dense
+  .v-subheader
+    padding: 0 16px
+.v-list-item__title,
+.v-list-item__subtitle
+  white-space: normal
+

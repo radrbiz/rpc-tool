@@ -1,0 +1,55 @@
+
+:root {
+  --dppxDevice: 1;
+  --dppx: calc(1 * var(--dppxDevice)); /* Original UI's dppx is 2x */
+
+  /* Layouts */
+  --htmlFont: 100%;
+  --bodyFont: inherit;
+  --htmlBg: #eef2f6;
+  --logoBgI: url(~@/assets/i/01.svg);
+  --logoBgI2: url(~@/assets/i/01.svg);
+  --fontFamily1: Monaco,Menlo,Consolas,Bitstream Vera Sans Mono,monospace;
+
+  --primaryColor: #0b7ae3;
+  --lineHeight: 1.667em;
+  --aColor: #0b7ae3;
+  --aColor2: #0b7ae3;
+  --aHoverColor: #6C5BFF;
+  --v-primary-base: #0b7ae3;
+
+  --txt1: #333;
+  --txt2: #666;
+  --txt3: #999;
+
+  --radius: calc(0.5rem / var(--dppx));
+  --radius2: calc(1rem / var(--dppx));
+
+  --fastOutSlowIn: cubic-bezier(.4,0,.2,1);
+  --swing: cubic-bezier(.25,.8,.25,1);
+  --linearOutSlowIn: cubic-bezier(.0,.0,.2,1);
+  --fastOutLinearIn: cubic-bezier(.4,.0,1,1);
+  --codeBgColor: #002b36;
+  --boxShadow1: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 1px 3px 0px rgba(0, 0, 0, 0.06);
+
+  --radarBgI: url(~@/assets/i/04.svg);
+  --loadingBgI: url(~@/assets/i/05.svg);
+}
+
+@media (max-width: 1366px) {
+  :root {
+    --dppx: calc(16 / 14);
+    --bodyFont: 14px;
+    --topnavH: calc(6.2rem / var(--dppx))!important;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --dppx: calc(16 / 12);
+    --topnavH: calc(6.2rem / var(--dppx))!important;
+    --bodyFont: 14px;
+    --mainSpacer: calc(20rem / var(--dppx));
+    --bdySpacer: calc(3.2rem / var(--dppx));
+  }
+}
